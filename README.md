@@ -3,6 +3,7 @@ Projekt na predmet Vývoj aplikácií s viacvrstvou architektúrou
 
 **ZADANIE** <br>
 *Vývoj aplikácie pre zapisovanie výsledkov súťaže Trial RC modelov* <br>
+**Popis**
 Priebeh sútaže sa nezaobíde bez týchto úkonov: <br>
 Na začiatku je potrebné vytvoriť PRETEK sútaž, kde musíme navoliť koľko TRATÍ bude potrebné zadať (minimu 3 maximum 7). 
 Ako náhle je vytvorený PRETEK, tak potrebujeme prihlásiť JAZDCOv. Jazdci, ktorý už boli predtým na PRETEKU, si vieme vytiahnuť z tabuliek pretekárov. Pokiaľ sa účastní nový pretekár potrebujeme ho pridať do tabuľky pretekárov a následne pridať do preteku. Pri pridávaní pretekára do PRETEKU prebehne registrácia vozidla pretekára, pri ktorom sa kontroľujú pravidlá pre účasť. Pravidlá podľa ktorých sa budeme riadiť pri detailoch, ktoré treba skontrolovať pri registrácii http://rcamtr.sk/akcie/pravidla/. Po registrácií, majú účastníci body, body ktoré im pomôžu (odrátajú sa od výsledku) alebo im prihoršia (prirátajú sa k výsledku). Pretekáry sú vo viacerých kategóriach.
