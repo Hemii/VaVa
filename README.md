@@ -1,7 +1,7 @@
 # VaVa
 Projekt na predmet Vývoj aplikácií s viacvrstvou architektúrou
 
-**ZADANIE**
+**ZADANIE** <br>
 Vývoj aplikácie pre zapisovanie výsledkov súťaže Trial RC modelov. 
 Priebeh sútaže sa nezaobíde bez týchto úkonov:
 Na začiatku je potrebné vytvoriť PRETEK sútaž, kde musíme navoliť koľko TRATÍ bude potrebné zadať (minimu 3 maximum 7). 
