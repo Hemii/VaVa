@@ -9,3 +9,5 @@ Ako náhle je vytvorený PRETEK, tak potrebujeme prihlásiť JAZDCOv. Jazdci, kt
 Pretek prebieha následovne: Pretekári odjazdia jednotlivé TRATE pri ktorom dostávajú body a čas. Tieto body budú následne zadané pretekárovi do aplikácia.Pretekár musí odjazdiť všetky, alebo je možnosť byť DNF (pretekár odstupil - možnosť zaškrtnutie). Všetci pretekári musia odjazdiť všetky trate, vrámci preteku (musia byť vyhodnotené). 
 Po zadaní všetkých výsledkov z tratí, prichádza k vyhodnocovaniu, kde sa prepočítavajú body a časy vrámci tratí. Nastavený je limit, pri ktorom sa presiahnutý čas zaráta k bodom. (1 sekunda = 1 bod). Výsledky sa vyhodnocujú vrámci PRETEKU a všetky výsledky sú zahrnuté do celkových výsledkov vrámci celého roku. 
 Všetky preteky vrámci jedného roka sú vyhodnotené celkovo, do celkové poradia za berie iba určitý počet pretekov.
+
+Musí byť možné exportovať výsledky do PDF alebo Excel
