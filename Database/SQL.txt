@@ -1,0 +1,132 @@
+create table if not exists pretekari
+(
+	id serial not null
+		constraint pretekary_pk
+			primary key,
+	meno varchar(50) not null,
+	priezvisko varchar(50) not null,
+	nick varchar(50),
+	startovne_cislo integer not null,
+	email varchar(50),
+	tel varchar(20)
+);
+
+alter table pretekari owner to postgres;
+
+create unique index if not exists pretekary_id_uindex
+	on pretekari (id);
+
+create table if not exists sutaze
+(
+	id serial not null
+		constraint sutaze_pk
+			primary key,
+	miesto varchar(500) not null,
+	datum varchar(50) not null,
+	pocet_sekcii integer not null
+);
+
+alter table sutaze owner to postgres;
+
+create unique index if not exists sutaze_id_uindex
+	on sutaze (id);
+
+create table if not exists prihlaseny
+(
+	sutaz_fk integer not null
+		constraint prihlaseny_sutaze_id_fk
+			references sutaze,
+	pretekar_fk integer not null
+		constraint prihlaseny_pretekary_id_fk
+			references pretekari,
+	id serial not null
+		constraint prihlaseny_pk
+			primary key
+);
+
+alter table prihlaseny owner to postgres;
+
+create table if not exists vybava_street
+(
+	pneumatiky boolean not null,
+	naraznik boolean not null,
+	pozdlzny_prekryv_kolies boolean not null,
+	priecny_prekryv_kolies_plus boolean not null,
+	priecny_prekryv_kolies_minus boolean not null,
+	rezerva boolean not null,
+	navijak boolean not null,
+	tazne_lano boolean not null,
+	exped_bedna boolean not null,
+	kanister boolean not null,
+	ecv boolean not null,
+	najazdove_plechy boolean not null,
+	stierace boolean not null,
+	zrkadla boolean not null,
+	interier boolean not null,
+	vodic boolean not null,
+	osvetlenie boolean not null,
+	prihlaseny_fk integer not null
+		constraint vybava_street_prihlaseny_id_fk
+			references prihlaseny,
+	body integer
+);
+
+alter table vybava_street owner to postgres;
+
+create table if not exists vybava_ultimate
+(
+	prilaseny_fk serial not null
+		constraint vybava_ultimate_prihlaseny_id_fk
+			references prihlaseny,
+	pneumatiky_minus boolean not null,
+	naraznik boolean not null,
+	pneumatiky_plus integer,
+	pozdlzny_prekryv_kolies boolean not null,
+	priecny_prekryv_kolies boolean not null,
+	ecv boolean not null,
+	osvetlenie boolean not null,
+	body integer not null
+);
+
+alter table vybava_ultimate owner to postgres;
+
+create unique index if not exists prihlaseny_id_uindex
+	on prihlaseny (id);
+
+create table if not exists sekcie
+(
+	id serial not null
+		constraint sekcie_pk
+			primary key,
+	cas integer,
+	body integer,
+	prihlaseny_fk integer not null
+		constraint sekcie_prihlaseny_id_fk
+			references prihlaseny
+);
+
+alter table sekcie owner to postgres;
+
+create unique index if not exists sekcie_id_uindex
+	on sekcie (id);
+
+create table if not exists vysledky
+(
+	id serial not null
+		constraint vysledky_pk
+			primary key,
+	celkovy_cas integer not null,
+	celkove_body integer not null,
+	sutaz_fk integer not null
+		constraint vysledky_sutaze_id_fk
+			references sutaze,
+	prihlaseny_fk integer
+		constraint vysledky_prihlaseny_id_fk
+			references prihlaseny
+);
+
+alter table vysledky owner to postgres;
+
+create unique index if not exists vysledky_id_uindex
+	on vysledky (id);
+
