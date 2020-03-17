@@ -20,8 +20,8 @@ public class Sekcia {
     @Column(name = "body")
     private int _body;
 
-    @Column(name = "prihlaseny_fk")
-    private Prihlasenie _prihlasenie;
+//    @Column(name = "prihlaseny_fk")
+//    private Prihlasenie _prihlasenie;
 
     public Sekcia() {
     }
@@ -30,11 +30,11 @@ public class Sekcia {
 
 
 
-    public Sekcia(Date _cas, int _body, Prihlasenie _prihlasenie) {
-        this._cas = _cas;
-        this._body = _body;
-        this._prihlasenie = _prihlasenie;
-    }
+//    public Sekcia(Date _cas, int _body, Prihlasenie _prihlasenie) {
+//        this._cas = _cas;
+//        this._body = _body;
+//        this._prihlasenie = _prihlasenie;
+//    }
 
     public int get_id() {
         return _id;
@@ -60,11 +60,11 @@ public class Sekcia {
         this._body = _body;
     }
 
-    public Prihlasenie get_prihlasenie() {
-        return _prihlasenie;
-    }
-
-    public void set_prihlasenie(Prihlasenie _prihlasenie) {
-        this._prihlasenie = _prihlasenie;
-    }
+//    public Prihlasenie get_prihlasenie() {
+//        return _prihlasenie;
+//    }
+//
+//    public void set_prihlasenie(Prihlasenie _prihlasenie) {
+//        this._prihlasenie = _prihlasenie;
+//    }
 }

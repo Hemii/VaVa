@@ -19,7 +19,7 @@ public class App
 
 
 
-      //  metoda1(entityManager);
+        metoda1(entityManager);
       //  metoda2(entityManager);
 
 
@@ -34,7 +34,7 @@ public class App
         sutaz.set_miesto("Revuca");
         sutaz.set_pocet_sek(5);
         sutaz.set_datum("28.10.9999");
-
+        sutaz.set_casovy_limit(10);
         entityManager.persist(sutaz);
 
         entityManager.getTransaction().commit();
