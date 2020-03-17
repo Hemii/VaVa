@@ -31,6 +31,7 @@ public class Pretekar {
     public Pretekar() {
     }
 
+
     public Pretekar(String _meno, String _priezvisko, String _nick, int _s_cislo, String _email, String _tel) {
         this._meno = _meno;
         this._priezvisko = _priezvisko;

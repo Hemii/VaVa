@@ -26,6 +26,10 @@ public class Sekcia {
     public Sekcia() {
     }
 
+
+
+
+
     public Sekcia(Date _cas, int _body, Prihlasenie _prihlasenie) {
         this._cas = _cas;
         this._body = _body;

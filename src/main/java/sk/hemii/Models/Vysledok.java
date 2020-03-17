@@ -11,4 +11,5 @@ public class Vysledok {
     private int id;
 
 
+
 }

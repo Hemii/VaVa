@@ -19,8 +19,8 @@ public class App
 
 
 
-        metoda1(entityManager);
-        metoda2(entityManager);
+      //  metoda1(entityManager);
+      //  metoda2(entityManager);
 
 
 

@@ -25,6 +25,7 @@ public class Sutaz {
     public Sutaz() {
     }
 
+
     public Sutaz(String _miesto, String _datum, int _pocet_sek, int _casovy_limit) {
         this._miesto = _miesto;
         this._datum = _datum;

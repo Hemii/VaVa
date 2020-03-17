@@ -19,6 +19,7 @@ public class Prihlasenie {
     public Prihlasenie() {
     }
 
+
     public int get_id() {
         return _id;
     }
