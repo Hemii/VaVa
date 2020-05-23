@@ -1,156 +1,177 @@
 package sk.hemii.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "vybava_street")
-public class vybava_street {
+@Table(name = "Vybava_street")
+public class Vybava_street {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int  _id;
 
-
-    private Boolean  pneumatiky;
-    private Boolean  naraznik;
-    private Boolean  pozdlzny_prekryv_kolies;
-    private Boolean  priecny_prekryv_kolies_plus;
-    private Boolean  priecny_prekryv_kolies_minus;
-    private Boolean  rezerva;
-    private Boolean  navijak;
-    private Boolean  tazne_lano;
-    private Boolean  exped_bedna;
-    private Boolean  kanister;
-    private Boolean  ecv;
-    private Boolean  najazdove_plechy;
-    private Boolean  stierace;
-    private Boolean  zrkadla;
-    private Boolean  interier;
+    @Column(name = "pneumatiky")
+    private Boolean  _pneumatiky;
+    @Column(name = "naraznik")
+    private Boolean  _naraznik;
+    @Column(name = "pozdlzny_prekryv_kolies")
+    private Boolean  _pozdlzny_prekryv_kolies;
+    @Column(name = "priecny_prekryv_kolies_plus")
+    private Boolean  _priecny_prekryv_kolies_plus;
+    @Column(name = "priecny_prekryv_kolies_minus")
+    private Boolean  _priecny_prekryv_kolies_minus;
+    @Column(name = "rezerva")
+    private Boolean  _rezerva;
+    @Column(name = "navijak")
+    private Boolean  _navijak;
+    @Column(name = "tazne_lano")
+    private Boolean  _tazne_lano;
+    @Column(name = "exped_bedna")
+    private Boolean  _exped_bedna;
+    @Column(name = "kanister")
+    private Boolean  _kanister;
+    @Column(name = "ecv")
+    private Boolean  _ecv;
+    @Column(name = "najazdove_plechy")
+    private Boolean  _najazdove_plechy;
+    @Column(name = "stierace")
+    private Boolean  _stierace;
+    @Column(name = "zrkadla")
+    private Boolean  _zrkadla;
+    @Column(name = "interier")
+    private Boolean  _interier;
+    @Column(name = "_vodic")
     private Boolean  vodic;
-    private Boolean  osvetlenie;
-    private int  prihlaseny_fk;
-    private int body;
+    @Column(name = "osvetlenie")
+    private Boolean  _osvetlenie;
+    @Column(name = "prihlaseny_fk")
+    private int  _prihlaseny_fk;
+    @Column(name = "body")
+    private int _body;
 
 
-    public vybava_street() {
+    public Vybava_street() {
 
     }
 
-    public Boolean getPneumatiky() {
-        return pneumatiky;
+    public Boolean get_pneumatiky() {
+        return _pneumatiky;
     }
 
-    public void setPneumatiky(Boolean pneumatiky) {
-        this.pneumatiky = pneumatiky;
+    public void set_pneumatiky(Boolean _pneumatiky) {
+        this._pneumatiky = _pneumatiky;
     }
 
-    public Boolean getNaraznik() {
-        return naraznik;
+    public Boolean get_naraznik() {
+        return _naraznik;
     }
 
-    public void setNaraznik(Boolean naraznik) {
-        this.naraznik = naraznik;
+    public void set_naraznik(Boolean _naraznik) {
+        this._naraznik = _naraznik;
     }
 
-    public Boolean getPozdlzny_prekryv_kolies() {
-        return pozdlzny_prekryv_kolies;
+    public Boolean get_pozdlzny_prekryv_kolies() {
+        return _pozdlzny_prekryv_kolies;
     }
 
-    public void setPozdlzny_prekryv_kolies(Boolean pozdlzny_prekryv_kolies) {
-        this.pozdlzny_prekryv_kolies = pozdlzny_prekryv_kolies;
+    public void set_pozdlzny_prekryv_kolies(Boolean _pozdlzny_prekryv_kolies) {
+        this._pozdlzny_prekryv_kolies = _pozdlzny_prekryv_kolies;
     }
 
-    public Boolean getPriecny_prekryv_kolies_plus() {
-        return priecny_prekryv_kolies_plus;
+    public Boolean get_priecny_prekryv_kolies_plus() {
+        return _priecny_prekryv_kolies_plus;
     }
 
-    public void setPriecny_prekryv_kolies_plus(Boolean priecny_prekryv_kolies_plus) {
-        this.priecny_prekryv_kolies_plus = priecny_prekryv_kolies_plus;
+    public void set_priecny_prekryv_kolies_plus(Boolean _priecny_prekryv_kolies_plus) {
+        this._priecny_prekryv_kolies_plus = _priecny_prekryv_kolies_plus;
     }
 
-    public Boolean getPriecny_prekryv_kolies_minus() {
-        return priecny_prekryv_kolies_minus;
+    public Boolean get_priecny_prekryv_kolies_minus() {
+        return _priecny_prekryv_kolies_minus;
     }
 
-    public void setPriecny_prekryv_kolies_minus(Boolean priecny_prekryv_kolies_minus) {
-        this.priecny_prekryv_kolies_minus = priecny_prekryv_kolies_minus;
+    public void set_priecny_prekryv_kolies_minus(Boolean _priecny_prekryv_kolies_minus) {
+        this._priecny_prekryv_kolies_minus = _priecny_prekryv_kolies_minus;
     }
 
-    public Boolean getRezerva() {
-        return rezerva;
+    public Boolean get_rezerva() {
+        return _rezerva;
     }
 
-    public void setRezerva(Boolean rezerva) {
-        this.rezerva = rezerva;
+    public void set_rezerva(Boolean _rezerva) {
+        this._rezerva = _rezerva;
     }
 
-    public Boolean getNavijak() {
-        return navijak;
+    public Boolean get_navijak() {
+        return _navijak;
     }
 
-    public void setNavijak(Boolean navijak) {
-        this.navijak = navijak;
+    public void set_navijak(Boolean _navijak) {
+        this._navijak = _navijak;
     }
 
-    public Boolean getTazne_lano() {
-        return tazne_lano;
+    public Boolean get_tazne_lano() {
+        return _tazne_lano;
     }
 
-    public void setTazne_lano(Boolean tazne_lano) {
-        this.tazne_lano = tazne_lano;
+    public void set_tazne_lano(Boolean _tazne_lano) {
+        this._tazne_lano = _tazne_lano;
     }
 
-    public Boolean getExped_bedna() {
-        return exped_bedna;
+    public Boolean get_exped_bedna() {
+        return _exped_bedna;
     }
 
-    public void setExped_bedna(Boolean exped_bedna) {
-        this.exped_bedna = exped_bedna;
+    public void set_exped_bedna(Boolean _exped_bedna) {
+        this._exped_bedna = _exped_bedna;
     }
 
-    public Boolean getKanister() {
-        return kanister;
+    public Boolean get_kanister() {
+        return _kanister;
     }
 
-    public void setKanister(Boolean kanister) {
-        this.kanister = kanister;
+    public void set_kanister(Boolean _kanister) {
+        this._kanister = _kanister;
     }
 
-    public Boolean getEcv() {
-        return ecv;
+    public Boolean get_ecv() {
+        return _ecv;
     }
 
-    public void setEcv(Boolean ecv) {
-        this.ecv = ecv;
+    public void set_ecv(Boolean _ecv) {
+        this._ecv = _ecv;
     }
 
-    public Boolean getNajazdove_plechy() {
-        return najazdove_plechy;
+    public Boolean get_najazdove_plechy() {
+        return _najazdove_plechy;
     }
 
-    public void setNajazdove_plechy(Boolean najazdove_plechy) {
-        this.najazdove_plechy = najazdove_plechy;
+    public void set_najazdove_plechy(Boolean _najazdove_plechy) {
+        this._najazdove_plechy = _najazdove_plechy;
     }
 
-    public Boolean getStierace() {
-        return stierace;
+    public Boolean get_stierace() {
+        return _stierace;
     }
 
-    public void setStierace(Boolean stierace) {
-        this.stierace = stierace;
+    public void set_stierace(Boolean _stierace) {
+        this._stierace = _stierace;
     }
 
-    public Boolean getZrkadla() {
-        return zrkadla;
+    public Boolean get_zrkadla() {
+        return _zrkadla;
     }
 
-    public void setZrkadla(Boolean zrkadla) {
-        this.zrkadla = zrkadla;
+    public void set_zrkadla(Boolean _zrkadla) {
+        this._zrkadla = _zrkadla;
     }
 
-    public Boolean getInterier() {
-        return interier;
+    public Boolean get_interier() {
+        return _interier;
     }
 
-    public void setInterier(Boolean interier) {
-        this.interier = interier;
+    public void set_interier(Boolean _interier) {
+        this._interier = _interier;
     }
 
     public Boolean getVodic() {
@@ -161,27 +182,27 @@ public class vybava_street {
         this.vodic = vodic;
     }
 
-    public Boolean getOsvetlenie() {
-        return osvetlenie;
+    public Boolean get_osvetlenie() {
+        return _osvetlenie;
     }
 
-    public void setOsvetlenie(Boolean osvetlenie) {
-        this.osvetlenie = osvetlenie;
+    public void set_osvetlenie(Boolean _osvetlenie) {
+        this._osvetlenie = _osvetlenie;
     }
 
-    public int getBody() {
-        return body;
+    public int get_prihlaseny_fk() {
+        return _prihlaseny_fk;
     }
 
-    public void setBody(int body) {
-        this.body = body;
+    public void set_prihlaseny_fk(int _prihlaseny_fk) {
+        this._prihlaseny_fk = _prihlaseny_fk;
     }
 
-    public int getPrihlaseny_fk() {
-        return prihlaseny_fk;
+    public int get_body() {
+        return _body;
     }
 
-    public void setPrihlaseny_fk(int prihlaseny_fk) {
-        this.prihlaseny_fk = prihlaseny_fk;
+    public void set_body(int _body) {
+        this._body = _body;
     }
 }

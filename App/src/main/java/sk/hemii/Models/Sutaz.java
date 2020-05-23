@@ -1,6 +1,7 @@
 package sk.hemii.Models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "sutaze")
@@ -22,6 +23,8 @@ public class Sutaz {
     @Column(name = "casovy_limit")
     private int _casovy_limit;
 
+    @OneToMany(mappedBy = "_sutaz")
+    private List<Prihlasenie> _prihlasenie;
     public Sutaz() {
     }
 
@@ -33,7 +36,7 @@ public class Sutaz {
         this._casovy_limit = _casovy_limit;
     }
 
-    public int get_casovy_limit() {
+    public  int get_casovy_limit() {
         return _casovy_limit;
     }
 

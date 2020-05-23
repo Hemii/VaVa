@@ -1,27 +1,24 @@
 package sk.hemii.Models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "sekcie")
+//@Entity
+//@Table(name = "sekcie")
 public class Sekcia {
 
-    @Id
-    @Column(name = "id")
+//    @Id
+//    @Column(name = "id")
     private int _id;
 
-    @Column(name = "cas")
+//    @Column(name = "cas")
     private Date _cas;
 
-    @Column(name = "body")
+//    @Column(name = "body")
     private int _body;
 
-//    @Column(name = "prihlaseny_fk")
-//    private Prihlasenie _prihlasenie;
+//    @OneToOne(mappedBy = "_pretekar")
+    private Prihlasenie _prihlasenie;
 
     public Sekcia() {
     }
@@ -30,11 +27,11 @@ public class Sekcia {
 
 
 
-//    public Sekcia(Date _cas, int _body, Prihlasenie _prihlasenie) {
-//        this._cas = _cas;
-//        this._body = _body;
-//        this._prihlasenie = _prihlasenie;
-//    }
+    public Sekcia(Date _cas, int _body, Prihlasenie _prihlasenie) {
+        this._cas = _cas;
+        this._body = _body;
+        this._prihlasenie = _prihlasenie;
+    }
 
     public int get_id() {
         return _id;
@@ -60,11 +57,11 @@ public class Sekcia {
         this._body = _body;
     }
 
-//    public Prihlasenie get_prihlasenie() {
-//        return _prihlasenie;
-//    }
-//
-//    public void set_prihlasenie(Prihlasenie _prihlasenie) {
-//        this._prihlasenie = _prihlasenie;
-//    }
+    public Prihlasenie get_prihlasenie() {
+        return _prihlasenie;
+    }
+
+    public void set_prihlasenie(Prihlasenie _prihlasenie) {
+        this._prihlasenie = _prihlasenie;
+    }
 }

@@ -10,11 +10,15 @@ public class Prihlasenie {
     @Column(name = "id")
     private int _id;
 
-//    @Column(name = "sutaz_fk")
-//    private Sutaz _sutaz_id;
 
-//    @Column(name = "pretekar_fk")
-//    private Pretekar _pretekar_id;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "sutaz_fk",referencedColumnName = "id")
+    private Sutaz _sutaz;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "pretekar_fk",referencedColumnName = "id")
+    private Pretekar _pretekar;
 
     public Prihlasenie() {
     }
@@ -24,23 +28,14 @@ public class Prihlasenie {
         return _id;
     }
 
-    public void set_id(int _id) {
-        this._id = _id;
+
+
+    public Sutaz get_sutaz_id() {
+        return _sutaz;
     }
 
-//    public Sutaz get_sutaz_id() {
-//        return _sutaz_id;
-//    }
-//
-//    public void set_sutaz_id(Sutaz _sutaz_id) {
-//        this._sutaz_id = _sutaz_id;
-//    }
 
-//    public Pretekar get_pretekar_id() {
-//        return _pretekar_id;
-//    }
-
-//    public void set_pretekar_id(Pretekar _pretekar_id) {
-//        this._pretekar_id = _pretekar_id;
-//    }
+    public Pretekar get_pretekar() {
+        return _pretekar;
+    }
 }

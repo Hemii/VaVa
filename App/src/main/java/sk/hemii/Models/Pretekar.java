@@ -1,6 +1,7 @@
 package sk.hemii.Models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "pretekari")
@@ -28,6 +29,9 @@ public class Pretekar {
     @Column(name = "tel")
     private String _tel;
 
+    @OneToMany(mappedBy = "_pretekar", fetch = FetchType.EAGER)
+    private List<Prihlasenie> _prihlasenie;
+
     public Pretekar() {
     }
 
@@ -43,10 +47,6 @@ public class Pretekar {
 
     public int get_id() {
         return _id;
-    }
-
-    public void set_id(int _id) {
-        this._id = _id;
     }
 
     public String get_meno() {
@@ -95,5 +95,13 @@ public class Pretekar {
 
     public void set_tel(String _tel) {
         this._tel = _tel;
+    }
+
+    public List<Prihlasenie> get_prihlasenie() {
+        return _prihlasenie;
+    }
+
+    public void set_prihlasenie(List<Prihlasenie> _prihlasenie) {
+        this._prihlasenie = _prihlasenie;
     }
 }
