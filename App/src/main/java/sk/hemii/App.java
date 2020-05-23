@@ -7,15 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.hibernate.Criteria;
-import sk.hemii.Models.Pretekar;
-import sk.hemii.Models.Prihlasenie;
-import sk.hemii.Models.Sutaz;
+import sk.hemii.Models.*;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import java.util.List;
 
 
 public class App extends Application

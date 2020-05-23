@@ -1,7 +1,6 @@
 package sk.hemii.Controler;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -10,9 +9,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sk.hemii.Functions;
-import sk.hemii.Models.Sutaz;
 import sk.hemii.Temporary_save;
-
+import sk.hemii.Models.*;
 import java.io.IOException;
 
 public class NewRaceControler {

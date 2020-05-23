@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Vybava_ultimate")
-public class Vybava_ultimate {
+public class vybava_ultimate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +31,7 @@ public class Vybava_ultimate {
     private int _body;
 
 
-    public Vybava_ultimate() {
+    public vybava_ultimate() {
     }
 
     public int get_prilaseny_fk() {

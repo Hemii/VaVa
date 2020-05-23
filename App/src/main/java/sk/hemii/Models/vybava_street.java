@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Vybava_street")
-public class Vybava_street {
+public class vybava_street {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -50,7 +50,7 @@ public class Vybava_street {
     private int _body;
 
 
-    public Vybava_street() {
+    public vybava_street() {
 
     }
 
