@@ -24,3 +24,5 @@ public class Vysledok {
     @Column(name = "prihlaseny_fk")
     private int prihlaseny_fk;
 }
+
+//test
