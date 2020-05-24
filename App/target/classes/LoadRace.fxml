@@ -7,15 +7,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.hemii.Controler.LoadRaceControler">
    <children>
-      <TableView fx:id="Loadrace_table" layoutX="32.0" layoutY="33.0" prefHeight="328.0" prefWidth="364.0">
+      <TableView fx:id="Loadrace_table" layoutX="32.0" layoutY="33.0" prefHeight="328.0" prefWidth="388.0">
         <columns>
           <TableColumn fx:id="miesto" prefWidth="117.0" text="Miesto" />
           <TableColumn fx:id="datum" prefWidth="75.0" text="Datum" />
             <TableColumn fx:id="sekcie" prefWidth="86.0" text="Sekcie" />
             <TableColumn fx:id="limit" prefWidth="85.0" text="Limit" />
+            <TableColumn fx:id="id" prefWidth="24.0" text="Id" />
         </columns>
       </TableView>
-      <Button layoutX="460.0" layoutY="173.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="78.0" text="Vybrat" />
-      <Button layoutX="460.0" layoutY="241.0" mnemonicParsing="false" prefHeight="48.0" onAction="#BackToDashBoard" prefWidth="78.0" text="Spat" />
+      <Button layoutX="460.0" layoutY="173.0" mnemonicParsing="false" onAction="#selectAndConfirm" prefHeight="48.0" prefWidth="78.0" text="Vybrat" />
+      <Button layoutX="460.0" layoutY="241.0" mnemonicParsing="false" onAction="#backToDashBoard" prefHeight="48.0" prefWidth="78.0" text="Spat" />
    </children>
 </AnchorPane>

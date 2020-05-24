@@ -30,6 +30,8 @@ public class Vybava_ultimate {
     @Column(name = "body")
     private int _body;
 
+    @OneToOne(mappedBy = "_vybava_ultimate", fetch = FetchType.EAGER)
+    private Prihlasenie _prihlasenie;
 
     public Vybava_ultimate() {
     }
