@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.hemii.Controler.CheckStreetControler">
+   <children>
+      <CheckBox fx:id="pneu" layoutX="44.0" layoutY="63.0" mnemonicParsing="false" text="pneumatiky" />
+      <CheckBox fx:id="naraznik" layoutX="44.0" layoutY="87.0" mnemonicParsing="false" text="naraznik" />
+      <CheckBox fx:id="ppk" layoutX="183.0" layoutY="112.0" mnemonicParsing="false" text="pozdlzny prekryv kolies" />
+      <CheckBox fx:id="rezerva" layoutX="44.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="63.0" text="rezerva" />
+      <CheckBox fx:id="navijak" layoutX="179.0" layoutY="63.0" mnemonicParsing="false" text="navijak" />
+      <CheckBox fx:id="tazne_lano" layoutX="180.0" layoutY="87.0" mnemonicParsing="false" text="tazne lano" />
+      <CheckBox fx:id="exp_bed" layoutX="44.0" layoutY="112.0" mnemonicParsing="false" text="expedicna bedna" />
+      <CheckBox fx:id="kanister" layoutX="46.0" layoutY="319.0" mnemonicParsing="false" text="kanister" />
+      <CheckBox fx:id="ecv" layoutX="44.0" layoutY="293.0" mnemonicParsing="false" text="ecv" />
+      <CheckBox fx:id="naj_plech" layoutX="44.0" layoutY="269.0" mnemonicParsing="false" text="najazdove plechy" />
+      <CheckBox fx:id="stierace" layoutX="45.0" layoutY="161.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="63.0" text="stierace" />
+      <CheckBox fx:id="zrkadla" layoutX="46.0" layoutY="192.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="61.0" text="zrkadla" />
+      <CheckBox fx:id="interier" layoutX="45.0" layoutY="219.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="62.0" text="interier" />
+      <CheckBox fx:id="vodic" layoutX="44.0" layoutY="37.0" mnemonicParsing="false" text="vodic" />
+      <CheckBox fx:id="osvetlenie" layoutX="180.0" layoutY="37.0" mnemonicParsing="false" text="osvetlenie" />
+      <RadioButton fx:id="ppkp" layoutX="329.0" layoutY="37.0" mnemonicParsing="false" text="Priecny prekryv kolies plus" />
+      <RadioButton fx:id="ppkm" layoutX="329.0" layoutY="63.0" mnemonicParsing="false" text="Priecny prekyv kolies minus" />
+      <Label layoutX="433.0" layoutY="285.0" text="Celkove body" />
+      <Label layoutX="433.0" layoutY="311.0" prefHeight="17.0" prefWidth="102.0" />
+      <Button layoutX="433.0" layoutY="353.0" mnemonicParsing="false" onAction="#test" prefHeight="25.0" prefWidth="102.0" text="Potvrdit" />
+      <ComboBox layoutX="231.0" layoutY="188.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

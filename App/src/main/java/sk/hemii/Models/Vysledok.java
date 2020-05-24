@@ -1,14 +1,14 @@
 package sk.hemii.Models;
 
 import javax.persistence.*;
-import javax.xml.crypto.Data;
 import java.text.DateFormat;
 
 @Entity
-@Table()
+@Table(name = "vysledky")
 public class Vysledok {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 

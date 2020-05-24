@@ -10,8 +10,8 @@
     <children>
         <AnchorPane id="scene" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Button layoutX="150.0" layoutY="188.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="138.0" onAction="#NewRaceScreen" text="Novy pretek" />
-            <Button fx:id="Pretek" layoutX="316.0" layoutY="188.0" mnemonicParsing="false" prefHeight="53.0" onAction="#LoadRaceScreen" prefWidth="138.0" text="Načítať pretek" />
+            <Button layoutX="150.0" layoutY="188.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="138.0" onAction="#newRaceScreen" text="Novy pretek" />
+            <Button fx:id="Pretek" layoutX="316.0" layoutY="188.0" mnemonicParsing="false" prefHeight="53.0" onAction="#loadRaceScreen" prefWidth="138.0" text="Načítať pretek" />
          </children></AnchorPane>
     </children>
     <columnConstraints>

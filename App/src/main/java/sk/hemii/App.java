@@ -1,21 +1,16 @@
 package sk.hemii;
 
 
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.hibernate.Criteria;
 import sk.hemii.Models.Pretekar;
 import sk.hemii.Models.Prihlasenie;
 import sk.hemii.Models.Sutaz;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import java.util.List;
 
 
 public class App extends Application
@@ -39,7 +34,7 @@ public class App extends Application
         launch(args);
 
     }
-
+//
 //    public static void main( String[] args )
 //    {
 //        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hemii");
@@ -47,34 +42,27 @@ public class App extends Application
 //
 //
 //
-//        entityManager.getTransaction().begin();
+////        entityManager.getTransaction().begin();
 //
-//        List<Pretekar> sutaze = entityManager.createQuery("FROM Pretekar where id = 2", Pretekar.class).getResultList();
-//        for (Pretekar row: sutaze) {
-//            System.out.println(row.get_priezvisko());
-//        }
-
-//        Pretekar pretekar = entityManager.find(Pretekar.class, 0);
-//        System.out.println(pretekar.get_id());
-
-//        Criteria criteria = entityManager.createCriteria(Pretekar.class);
-//        List<Pretekar> list = criteria.add(Restrictions.eq("yourField", yourFieldValue)).list();
-
-//        entityManager.getTransaction().commit();
-//
-//
-//
-//
-//
-//
-//
-//
-//        metoda1(entityManager);
+////        Prihlasenie prihlasenie = new Prihlasenie();
+////        Vybava_street vybava_street = new Vybava_street();
+////        vybava_street = entityManager.find(Vybava_street.class,5);
+////
+////        Pretekar pretekar = new Pretekar();
+////        pretekar = entityManager.find(Pretekar.class,2);
+////
+////        Sutaz sutaz = new Sutaz();
+////        sutaz = entityManager.find(Sutaz.class,18);
+////
+////        prihlasenie.set_sutaz(sutaz);
+////        prihlasenie.set_kategoria("ultimate");
+////        prihlasenie.set_vybava_street(vybava_street);
+////        prihlasenie.set_pretekar(pretekar);
+////
+////        entityManager.persist(prihlasenie);
 //        metoda2(entityManager);
 //
-//
-//
-//
+////        entityManager.getTransaction().commit();
 //        entityManager.close();
 //    }
 

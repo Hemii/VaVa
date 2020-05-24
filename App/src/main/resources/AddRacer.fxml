@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.hemii.Controler.AddRacerControler">
+   <children>
+      <TableView fx:id="tabulka" layoutX="44.0" layoutY="33.0" prefHeight="341.0" prefWidth="332.0">
+        <columns>
+          <TableColumn fx:id="meno" prefWidth="75.0" text="Meno" />
+          <TableColumn fx:id="priezvisko" prefWidth="75.0" text="Priezvisko" />
+            <TableColumn fx:id="nick" prefWidth="75.0" text="Nick" />
+            <TableColumn fx:id="cislo" prefWidth="75.0" text="Start. cislo" />
+            <TableColumn fx:id="id" prefWidth="31.0" text="id" />
+        </columns>
+      </TableView>
+      <Button layoutX="425.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Pokračovať ultimate" />
+      <Button layoutX="425.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Spať" />
+      <Button layoutX="425.0" layoutY="146.0" mnemonicParsing="false" onAction="#addRacer" prefHeight="25.0" prefWidth="140.0" text="Pokračovať street" />
+   </children>
+</AnchorPane>

@@ -23,13 +23,22 @@ public class Sutaz {
     @Column(name = "casovy_limit")
     private int _casovy_limit;
 
-    @OneToMany(mappedBy = "_sutaz")
+    @OneToMany(mappedBy = "_sutaz",fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     private List<Prihlasenie> _prihlasenie;
+
     public Sutaz() {
     }
 
 
     public Sutaz(String _miesto, String _datum, int _pocet_sek, int _casovy_limit) {
+        this._miesto = _miesto;
+        this._datum = _datum;
+        this._pocet_sek = _pocet_sek;
+        this._casovy_limit = _casovy_limit;
+    }
+
+    public Sutaz(int _id, String _miesto, String _datum, int _pocet_sek, int _casovy_limit) {
+        this._id = _id;
         this._miesto = _miesto;
         this._datum = _datum;
         this._pocet_sek = _pocet_sek;
