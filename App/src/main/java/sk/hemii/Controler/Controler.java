@@ -1,7 +1,10 @@
 package sk.hemii.Controler;
 
 import javafx.event.ActionEvent;
+<<<<<<< HEAD
 import javafx.fxml.FXML;
+=======
+>>>>>>> a25416e4f9f4b27a7b3c5c712ac5512e736a167b
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -16,11 +19,10 @@ public class Controler {
     Scene worker_show_screen_scene;
     Stage window;
     Stage primaryStage;
-    @FXML
 
 
 
-    public void NewRaceScreen(ActionEvent event) throws Exception {
+    public void newRaceScreen(ActionEvent event) throws Exception {
 
         Parent screen = FXMLLoader.load(getClass().getResource("/NewRace.fxml"));
         NewRaceScreen = new Scene(screen);
@@ -29,7 +31,7 @@ public class Controler {
         window.show();
     }
 
-    public void BackToDashBoard(ActionEvent event) throws Exception {
+    public void backToDashBoard(ActionEvent event) throws Exception {
         Parent screen = FXMLLoader.load(getClass().getResource("/DashBoard.fxml"));
         DashBoardScreen = new Scene(screen);
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -37,7 +39,7 @@ public class Controler {
         window.show();
     }
 
-    public void LoadRaceScreen(ActionEvent event) throws Exception {
+    public void loadRaceScreen(ActionEvent event) throws Exception {
 
         Parent screen = FXMLLoader.load(getClass().getResource("/LoadRace.fxml"));
         NewRaceScreen = new Scene(screen);

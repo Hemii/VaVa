@@ -40,18 +40,39 @@ public class vybava_street {
     private Boolean  _zrkadla;
     @Column(name = "interier")
     private Boolean  _interier;
-    @Column(name = "_vodic")
-    private Boolean  vodic;
+    @Column(name = "vodic")
+    private Boolean  _vodic;
     @Column(name = "osvetlenie")
     private Boolean  _osvetlenie;
-    @Column(name = "prihlaseny_fk")
-    private int  _prihlaseny_fk;
+
     @Column(name = "body")
     private int _body;
 
+    @OneToOne(mappedBy = "_vybava_street", fetch = FetchType.EAGER)
+    private Prihlasenie _prihlasenie;
 
     public vybava_street() {
 
+    }
+
+    public Vybava_street(Boolean _pneumatiky, Boolean _naraznik, Boolean _pozdlzny_prekryv_kolies, Boolean _priecny_prekryv_kolies_plus, Boolean _priecny_prekryv_kolies_minus, Boolean _rezerva, Boolean _navijak, Boolean _tazne_lano, Boolean _exped_bedna, Boolean _kanister, Boolean _ecv, Boolean _najazdove_plechy, Boolean _stierace, Boolean _zrkadla, Boolean _interier, Boolean _vodic, Boolean _osvetlenie) {
+        this._pneumatiky = _pneumatiky;
+        this._naraznik = _naraznik;
+        this._pozdlzny_prekryv_kolies = _pozdlzny_prekryv_kolies;
+        this._priecny_prekryv_kolies_plus = _priecny_prekryv_kolies_plus;
+        this._priecny_prekryv_kolies_minus = _priecny_prekryv_kolies_minus;
+        this._rezerva = _rezerva;
+        this._navijak = _navijak;
+        this._tazne_lano = _tazne_lano;
+        this._exped_bedna = _exped_bedna;
+        this._kanister = _kanister;
+        this._ecv = _ecv;
+        this._najazdove_plechy = _najazdove_plechy;
+        this._stierace = _stierace;
+        this._zrkadla = _zrkadla;
+        this._interier = _interier;
+        this._vodic = _vodic;
+        this._osvetlenie = _osvetlenie;
     }
 
     public Boolean get_pneumatiky() {
@@ -175,11 +196,11 @@ public class vybava_street {
     }
 
     public Boolean getVodic() {
-        return vodic;
+        return _vodic;
     }
 
     public void setVodic(Boolean vodic) {
-        this.vodic = vodic;
+        this._vodic = vodic;
     }
 
     public Boolean get_osvetlenie() {
@@ -190,13 +211,6 @@ public class vybava_street {
         this._osvetlenie = _osvetlenie;
     }
 
-    public int get_prihlaseny_fk() {
-        return _prihlaseny_fk;
-    }
-
-    public void set_prihlaseny_fk(int _prihlaseny_fk) {
-        this._prihlaseny_fk = _prihlaseny_fk;
-    }
 
     public int get_body() {
         return _body;
@@ -204,5 +218,9 @@ public class vybava_street {
 
     public void set_body(int _body) {
         this._body = _body;
+    }
+
+    public int get_id() {
+        return _id;
     }
 }

@@ -3,21 +3,22 @@ package sk.hemii.Models;
 import javax.persistence.*;
 import java.util.Date;
 
-//@Entity
-//@Table(name = "sekcie")
+@Entity
+@Table(name = "sekcie")
 public class Sekcia {
 
-//    @Id
-//    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int _id;
 
-//    @Column(name = "cas")
+    @Column(name = "cas")
     private Date _cas;
 
-//    @Column(name = "body")
+    @Column(name = "body")
     private int _body;
 
-//    @OneToOne(mappedBy = "_pretekar")
+    @OneToOne(mappedBy = "_pretekar")
     private Prihlasenie _prihlasenie;
 
     public Sekcia() {

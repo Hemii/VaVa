@@ -8,9 +8,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+<<<<<<< HEAD
 import sk.hemii.Functions;
 import sk.hemii.Temporary_save;
 import sk.hemii.Models.*;
+=======
+import sk.hemii.Dao.Temporary_save;
+import sk.hemii.Models.Sutaz;
+import sk.hemii.Service.RaceService;
+
+>>>>>>> a25416e4f9f4b27a7b3c5c712ac5512e736a167b
 import java.io.IOException;
 
 public class NewRaceControler {
@@ -21,8 +28,12 @@ public class NewRaceControler {
     Scene Screen;
     Stage window;
 
+    private RaceService raceService = new RaceService();
 
-    public void BackToDashBoard(ActionEvent event) throws Exception {
+
+
+
+    public void backToDashBoard(ActionEvent event) throws Exception {
         Parent screen = FXMLLoader.load(getClass().getResource("/DashBoard.fxml"));
         Screen = new Scene(screen);
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -30,7 +41,7 @@ public class NewRaceControler {
         window.show();
     }
 
-    public void ConfirmAndNext(ActionEvent event) throws IOException {
+    public void confirmAndNext(ActionEvent event) throws IOException {
 
         if (input_place.getText().equals("") || input_date.getText().equals("") || input_nsections.getText().equals("") || input_tsection.getText().equals("")) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -54,10 +65,11 @@ public class NewRaceControler {
 
             }else  {
                 Sutaz sutaz = new Sutaz(input_place.getText(), input_date.getText(), Integer.parseInt(input_nsections.getText()), Integer.parseInt(input_tsection.getText()));
-                System.out.println(sutaz);
-                Temporary_save.set_sutaz(sutaz);
-                Functions.Push_to_table(sutaz);
-                Parent screen = FXMLLoader.load(getClass().getResource("/HomeRace.fxml"));
+
+                int id = raceService.addRace(sutaz);
+                Temporary_save.set_sutaz(new Sutaz(id,input_place.getText(), input_date.getText(), Integer.parseInt(input_nsections.getText()), Integer.parseInt(input_tsection.getText())));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/HomeRace.fxml"));
+                Parent screen = loader.load();
                 Screen = new Scene(screen);
                 window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(Screen);

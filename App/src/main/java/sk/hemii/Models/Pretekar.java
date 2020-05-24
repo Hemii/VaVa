@@ -29,7 +29,7 @@ public class Pretekar {
     @Column(name = "tel")
     private String _tel;
 
-    @OneToMany(mappedBy = "_pretekar", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "_pretekar",fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     private List<Prihlasenie> _prihlasenie;
 
     public Pretekar() {
@@ -103,5 +103,9 @@ public class Pretekar {
 
     public void set_prihlasenie(List<Prihlasenie> _prihlasenie) {
         this._prihlasenie = _prihlasenie;
+    }
+
+    public void set_id(int _id) {
+        this._id = _id;
     }
 }

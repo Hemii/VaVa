@@ -1,7 +1,5 @@
 package sk.hemii.Controler;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,17 +11,25 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+<<<<<<< HEAD
 import sk.hemii.Models.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+=======
+import sk.hemii.Dao.Temporary_save;
+import sk.hemii.Models.Sutaz;
+import sk.hemii.Service.RaceService;
+
+>>>>>>> a25416e4f9f4b27a7b3c5c712ac5512e736a167b
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 
 public class LoadRaceControler implements Initializable {
+
+    private RaceService raceService = new RaceService();
     Scene Screen;
     Stage window;
     @FXML
@@ -36,7 +42,8 @@ public class LoadRaceControler implements Initializable {
     private TableColumn<Sutaz, String> sekcie;
     @FXML
     private TableColumn<Sutaz, String> limit;
-
+    @FXML
+    private TableColumn<Sutaz, Integer> id;
 
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -44,12 +51,13 @@ public class LoadRaceControler implements Initializable {
         datum.setCellValueFactory(new PropertyValueFactory<Sutaz, String>("_datum"));
         sekcie.setCellValueFactory(new PropertyValueFactory<Sutaz, String>("_pocet_sek"));
         limit.setCellValueFactory(new PropertyValueFactory<Sutaz, String>("_casovy_limit"));
-        Loadrace_table.setItems(LoadRaces());
+        id.setCellValueFactory(new PropertyValueFactory<Sutaz, Integer>("_id"));
+        Loadrace_table.setItems(raceService.loadRaces());
 
     }
 
 
-    public void BackToDashBoard(ActionEvent event) throws Exception {
+    public void backToDashBoard(ActionEvent event) throws Exception {
         Parent screen = FXMLLoader.load(getClass().getResource("/DashBoard.fxml"));
         Screen = new Scene(screen);
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -57,27 +65,18 @@ public class LoadRaceControler implements Initializable {
         window.show();
     }
 
-//    Sutaz sutaz = new Sutaz(Loadrace_table.getSelectionModel().getSelectedItem().get_miesto(), Loadrace_table.getSelectionModel().getSelectedItem().get_datum(), Loadrace_table.getSelectionModel().getSelectedItem().get_pocet_sek(), Loadrace_table.getSelectionModel().getSelectedItem().get_casovy_limit());
-//        System.out.println(sutaz);
 
 
-    public ObservableList<Sutaz> LoadRaces() {
-        ObservableList<Sutaz> enseignantList = FXCollections.observableArrayList();
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hemii");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-        List<Sutaz> sutaze = entityManager.createQuery("FROM Sutaz", Sutaz.class).getResultList();
-        for (Sutaz ent : sutaze) {
-            enseignantList.add(ent);
+    public void selectAndConfirm(ActionEvent event) throws Exception{
+        Sutaz sutaz  = new Sutaz(Loadrace_table.getSelectionModel().getSelectedItem().get_id(),Loadrace_table.getSelectionModel().getSelectedItem().get_miesto(),Loadrace_table.getSelectionModel().getSelectedItem().get_datum(),Loadrace_table.getSelectionModel().getSelectedItem().get_pocet_sek(),Loadrace_table.getSelectionModel().getSelectedItem().get_casovy_limit());
+        Temporary_save.set_sutaz(sutaz);
+        System.out.println(sutaz.get_id());
+        Parent screen = FXMLLoader.load(getClass().getResource("/HomeRace.fxml"));
+        Screen = new Scene(screen);
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(Screen);
+        window.show();
 
-
-        }
-
-
-
-        entityManager.getTransaction().commit();
-
-        return enseignantList;
     }
 
 
