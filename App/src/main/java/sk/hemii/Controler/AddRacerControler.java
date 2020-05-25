@@ -12,18 +12,19 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import sk.hemii.Dao.Temporary_save;
+import sk.hemii.Service.Temporary_save;
 import sk.hemii.Models.Pretekar;
 import sk.hemii.Models.Prihlasenie;
-import sk.hemii.Service.RacersService;
+import sk.hemii.Service.RacerService;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AddRacerControler implements Initializable {
     Scene Screen;
     Stage window;
-    private RacersService racerService = new RacersService();
+    private RacerService racerService = new RacerService();
     @FXML
     private TableView<Pretekar> tabulka;
     @FXML
@@ -45,7 +46,7 @@ public class AddRacerControler implements Initializable {
         nick.setCellValueFactory(new PropertyValueFactory<Pretekar, String>("_nick"));
         cislo.setCellValueFactory(new PropertyValueFactory<Pretekar, String>("_s_cislo"));
         id.setCellValueFactory(new PropertyValueFactory<Pretekar,Integer>("_id"));
-        tabulka.setItems(racerService.loadRaces());
+        tabulka.setItems(racerService.loadRacers());
 
 
     }
@@ -63,5 +64,22 @@ public class AddRacerControler implements Initializable {
         window.show();
     }
 
+    public void createRacer(ActionEvent event) throws Exception{
+
+        Parent screen = FXMLLoader.load(getClass().getResource("/CreateRacer.fxml"));
+        Screen = new Scene(screen);
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(Screen);
+        window.show();
+    }
+
+    public void backToHRace(ActionEvent event) throws IOException {
+        Parent screen = FXMLLoader.load(getClass().getResource("/HomeRace.fxml"));
+        Screen = new Scene(screen);
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(Screen);
+        window.show();
+
+    }
 
 }

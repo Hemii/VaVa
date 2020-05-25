@@ -8,16 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-<<<<<<< HEAD
-import sk.hemii.Functions;
-import sk.hemii.Temporary_save;
-import sk.hemii.Models.*;
-=======
-import sk.hemii.Dao.Temporary_save;
+import sk.hemii.Service.Temporary_save;
 import sk.hemii.Models.Sutaz;
 import sk.hemii.Service.RaceService;
 
->>>>>>> a25416e4f9f4b27a7b3c5c712ac5512e736a167b
 import java.io.IOException;
 
 public class NewRaceControler {

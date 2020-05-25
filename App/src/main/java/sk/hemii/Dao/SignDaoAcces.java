@@ -7,12 +7,13 @@ import sk.hemii.Models.Prihlasenie;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
 
 public class SignDaoAcces implements SignDao {
     Logger signDAOLogger = LoggerFactory.getLogger(SignDaoAcces.class);
 
     @Override
-    public void insert(Prihlasenie prihlasenie) {
+    public int insert(Prihlasenie prihlasenie) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hemii");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         int id=0;
@@ -33,5 +34,19 @@ public class SignDaoAcces implements SignDao {
 
 
         }
+        return id;
+    }
+
+    public List<Prihlasenie> select(int values) {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hemii");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        List<Prihlasenie> prihlasenia = (List<Prihlasenie>) entityManager.createQuery("FROM Prihlasenie p where p._sutaz.id = (:param)" , Prihlasenie.class).setParameter("param", values).getResultList();
+
+        entityManager.getTransaction().commit();
+        return  prihlasenia;
+
+
+
     }
 }

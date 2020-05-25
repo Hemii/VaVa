@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Vybava_ultimate")
-public class vybava_ultimate {
+public class Vybava_ultimate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +33,7 @@ public class vybava_ultimate {
     @OneToOne(mappedBy = "_vybava_ultimate", fetch = FetchType.EAGER)
     private Prihlasenie _prihlasenie;
 
-    public vybava_ultimate() {
+    public Vybava_ultimate() {
     }
 
     public int get_prilaseny_fk() {

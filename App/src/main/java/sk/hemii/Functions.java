@@ -1,10 +1,14 @@
 package sk.hemii;
 
+import sk.hemii.Models.Pretekar;
+import sk.hemii.Models.Prihlasenie;
 import sk.hemii.Models.Sutaz;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
+import java.util.logging.Logger;
 
 public class Functions {
 

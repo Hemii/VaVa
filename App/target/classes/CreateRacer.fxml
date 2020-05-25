@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.hemii.Controler.CreateRacerControler">
+   <children>
+      <Label layoutX="64.0" layoutY="83.0" text="Priezvisko" />
+      <Button layoutX="467.0" layoutY="309.0" onAction="#createRacer" mnemonicParsing="false" text="Pridať " />
+      <Label layoutX="64.0" layoutY="128.0" text="Nick" />
+      <Label layoutX="64.0" layoutY="163.0" text="Starovne cislo" />
+      <Label layoutX="64.0" layoutY="243.0" text="tel" />
+      <Label layoutX="64.0" layoutY="48.0" text="Meno" />
+      <Label layoutX="64.0" layoutY="208.0" text="email" />
+      <TextField fx:id="meno" layoutX="155.0" layoutY="44.0" />
+      <TextField fx:id="priezvisko" layoutX="155.0" layoutY="79.0" />
+      <TextField fx:id="nick" layoutX="155.0" layoutY="124.0" />
+      <TextField fx:id="s_cislo" layoutX="155.0" layoutY="159.0" />
+      <TextField fx:id="email" layoutX="155.0" layoutY="204.0" />
+      <TextField fx:id="tel" layoutX="155.0" layoutY="239.0" />
+      <Button layoutX="410.0" layoutY="309.0" mnemonicParsing="false" text="Spat" />
+   </children>
+</AnchorPane>

@@ -1,10 +1,6 @@
 package sk.hemii.Controler;
 
 import javafx.event.ActionEvent;
-<<<<<<< HEAD
-import javafx.fxml.FXML;
-=======
->>>>>>> a25416e4f9f4b27a7b3c5c712ac5512e736a167b
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;

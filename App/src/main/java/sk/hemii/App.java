@@ -6,13 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-<<<<<<< HEAD
-import sk.hemii.Models.*;
-=======
 import sk.hemii.Models.Pretekar;
 import sk.hemii.Models.Prihlasenie;
 import sk.hemii.Models.Sutaz;
->>>>>>> a25416e4f9f4b27a7b3c5c712ac5512e736a167b
 
 import javax.persistence.EntityManager;
 

@@ -3,6 +3,7 @@ package sk.hemii.Service;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import sk.hemii.Dao.RaceDaoAcces;
+import sk.hemii.Models.Prihlasenie;
 import sk.hemii.Models.Sutaz;
 
 import java.util.List;
@@ -30,6 +31,6 @@ public class RaceService {
 
 
 
-//    public List<Sutaz>
+
 
 }

@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Vybava_street")
-public class vybava_street {
+public class Vybava_street {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -51,7 +51,7 @@ public class vybava_street {
     @OneToOne(mappedBy = "_vybava_street", fetch = FetchType.EAGER)
     private Prihlasenie _prihlasenie;
 
-    public vybava_street() {
+    public Vybava_street() {
 
     }
 

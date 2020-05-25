@@ -1,4 +1,4 @@
-package sk.hemii.Dao;
+package sk.hemii.Service;
 
 import sk.hemii.Models.Prihlasenie;
 import sk.hemii.Models.Sutaz;

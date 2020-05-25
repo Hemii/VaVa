@@ -4,6 +4,6 @@ import sk.hemii.Models.Prihlasenie;
 
 public interface SignDao {
 
-    void insert(Prihlasenie prihlasenie);
+    int insert(Prihlasenie prihlasenie);
 
 }

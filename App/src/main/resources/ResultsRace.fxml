@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.hemii.Controler.ResultsRaceControler">
+   <children>
+      <Button layoutX="495.0" layoutY="275.0" mnemonicParsing="false" onAction="#result" text="Vyhodnotiť" />
+      <Button layoutX="508.0" layoutY="308.0" mnemonicParsing="false" text="ToPDF" />
+      <TableView fx:id="table" layoutX="27.0" layoutY="54.0" prefHeight="318.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="table_nick" prefWidth="75.0" text="Nick" />
+          <TableColumn fx:id="table_body" prefWidth="75.0" text="Body" />
+            <TableColumn fx:id="table_min" prefWidth="75.0" text="Cas min" />
+            <TableColumn fx:id="table_sek" prefWidth="75.0" text="Cas sek" />
+        </columns>
+      </TableView>
+      <Button layoutX="508.0" layoutY="347.0" onAction="#back" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>
