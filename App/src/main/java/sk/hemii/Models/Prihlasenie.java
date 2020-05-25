@@ -1,6 +1,7 @@
 package sk.hemii.Models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "prihlasenia")
@@ -31,6 +32,13 @@ public class Prihlasenie {
     @JoinColumn(name = "pretekar_fk", referencedColumnName = "id")
     private Pretekar _pretekar;
 
+    @OneToMany(mappedBy = "_prihlasenie",fetch = FetchType.EAGER)
+    private List<Sekcia> _sekcia;
+
+    @OneToOne(mappedBy = "_prihlasenie", fetch = FetchType.EAGER)
+    private Vysledok _vysledok;
+
+
     public Prihlasenie() {
     }
 
@@ -43,11 +51,18 @@ public class Prihlasenie {
         this._pretekar = pretekar;
     }
 
+    public Prihlasenie(int id) {
+        this._id = id;
+    }
+
 
     public int get_id() {
         return _id;
     }
 
+    public void set_id(int _id) {
+        this._id = _id;
+    }
 
     public Vybava_street get_vybava_street() {
         return _vybava_street;
@@ -89,6 +104,15 @@ public class Prihlasenie {
         this._kategoria = _kategoria;
     }
 
+    public String get_name_pretekar(){
+        return this._pretekar.get_meno();
+    }
 
+    public List<Sekcia> get_sekcia() {
+        return _sekcia;
+    }
 
+    public void set_sekcia(List<Sekcia> _sekcia) {
+        this._sekcia = _sekcia;
+    }
 }

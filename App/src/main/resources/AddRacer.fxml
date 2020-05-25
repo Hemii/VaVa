@@ -17,7 +17,8 @@
         </columns>
       </TableView>
       <Button layoutX="425.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Pokračovať ultimate" />
-      <Button layoutX="425.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Spať" />
+      <Button layoutX="425.0" layoutY="316.0" mnemonicParsing="false" onAction="#backToHRace" prefHeight="25.0" prefWidth="76.0" text="Spať" />
       <Button layoutX="425.0" layoutY="146.0" mnemonicParsing="false" onAction="#addRacer" prefHeight="25.0" prefWidth="140.0" text="Pokračovať street" />
+      <Button layoutX="426.0" layoutY="280.0" mnemonicParsing="false" onAction="#createRacer" prefHeight="25.0" prefWidth="139.0" text="Vytvorit noveho" />
    </children>
 </AnchorPane>

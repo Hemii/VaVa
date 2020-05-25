@@ -1,7 +1,6 @@
 package sk.hemii.Models;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "sekcie")
@@ -12,14 +11,26 @@ public class Sekcia {
     @Column(name = "id")
     private int _id;
 
-    @Column(name = "cas")
-    private Date _cas;
+    @Column(name = "cas_min")
+    private int _cas_min;
+
+    @Column(name = "cas_sek")
+    private int _cas_sek;
 
     @Column(name = "body")
     private int _body;
 
-    @OneToOne(mappedBy = "_pretekar")
+    @Column(name = "sekcia")
+    private int _sekcia;
+
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "prihlasenie_fk", referencedColumnName = "id")
     private Prihlasenie _prihlasenie;
+
+
+
+
 
     public Sekcia() {
     }
@@ -28,11 +39,7 @@ public class Sekcia {
 
 
 
-    public Sekcia(Date _cas, int _body, Prihlasenie _prihlasenie) {
-        this._cas = _cas;
-        this._body = _body;
-        this._prihlasenie = _prihlasenie;
-    }
+
 
     public int get_id() {
         return _id;
@@ -42,12 +49,20 @@ public class Sekcia {
         this._id = _id;
     }
 
-    public Date get_cas() {
-        return _cas;
+    public int get_cas_min() {
+        return _cas_min;
     }
 
-    public void set_cas(Date _cas) {
-        this._cas = _cas;
+    public void set_cas_min(int _cas_min) {
+        this._cas_min = _cas_min;
+    }
+
+    public int get_cas_sek() {
+        return _cas_sek;
+    }
+
+    public void set_cas_sek(int _cas_sek) {
+        this._cas_sek = _cas_sek;
     }
 
     public int get_body() {
@@ -64,5 +79,13 @@ public class Sekcia {
 
     public void set_prihlasenie(Prihlasenie _prihlasenie) {
         this._prihlasenie = _prihlasenie;
+    }
+
+    public int get_sekcia() {
+        return _sekcia;
+    }
+
+    public void set_sekcia(int _sekcia) {
+        this._sekcia = _sekcia;
     }
 }

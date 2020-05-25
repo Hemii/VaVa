@@ -11,7 +11,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import sk.hemii.Dao.Temporary_save;
+import sk.hemii.Service.Temporary_save;
 import sk.hemii.Models.Sutaz;
 import sk.hemii.Service.RaceService;
 
@@ -62,7 +62,6 @@ public class LoadRaceControler implements Initializable {
     public void selectAndConfirm(ActionEvent event) throws Exception{
         Sutaz sutaz  = new Sutaz(Loadrace_table.getSelectionModel().getSelectedItem().get_id(),Loadrace_table.getSelectionModel().getSelectedItem().get_miesto(),Loadrace_table.getSelectionModel().getSelectedItem().get_datum(),Loadrace_table.getSelectionModel().getSelectedItem().get_pocet_sek(),Loadrace_table.getSelectionModel().getSelectedItem().get_casovy_limit());
         Temporary_save.set_sutaz(sutaz);
-        System.out.println(sutaz.get_id());
         Parent screen = FXMLLoader.load(getClass().getResource("/HomeRace.fxml"));
         Screen = new Scene(screen);
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();

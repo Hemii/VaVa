@@ -29,4 +29,12 @@ public class RacerDaoAcces implements RacerDao {
         return pretekar;
     }
 
+    public void insert(Pretekar pretekar){
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hemii");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(pretekar);
+        entityManager.getTransaction().commit();
+    }
+
 }

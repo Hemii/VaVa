@@ -7,11 +7,11 @@ import sk.hemii.Models.Pretekar;
 
 import java.util.List;
 
-public class RacersService {
+public class RacerService {
     private RacerDaoAcces racerDao = new RacerDaoAcces();
 
 
-    public ObservableList<Pretekar> loadRaces(){
+    public ObservableList<Pretekar> loadRacers(){
         ObservableList<Pretekar> enseignantList = FXCollections.observableArrayList();
         List<Pretekar> Pretekar = racerDao.loadall();
         for (Pretekar ent : Pretekar) {
@@ -23,8 +23,15 @@ public class RacersService {
         return enseignantList;
     }
 
+    public void addRacer(Pretekar pretekar){
+    racerDao.insert(pretekar);
+    }
+
+
     public Pretekar findRacer(int id) {
 
         return racerDao.select(id);
     }
+
+
 }

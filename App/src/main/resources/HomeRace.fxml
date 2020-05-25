@@ -16,17 +16,18 @@
       <Label layoutX="14.0" layoutY="41.0" prefHeight="17.0" prefWidth="94.0" text="Datum konania" />
       <Label layoutX="14.0" layoutY="69.0" prefHeight="17.0" prefWidth="94.0" text="Pocet sekcii" />
       <Label layoutX="14.0" layoutY="98.0" prefHeight="17.0" prefWidth="94.0" text="Cas na sekciu" />
-      <TableView layoutX="20.0" layoutY="130.0" prefHeight="248.0" prefWidth="339.0">
+      <TableView fx:id="table" layoutX="20.0" layoutY="130.0" prefHeight="248.0" prefWidth="339.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Meno" />
-          <TableColumn prefWidth="75.0" text="Priezvisko" />
-            <TableColumn prefWidth="95.0" text="Startovne cislo" />
-            <TableColumn prefWidth="92.0" text="Kategoria" />
-            <TableColumn minWidth="3.0" prefWidth="51.0" text="Id" />
+          <TableColumn fx:id="table_meno" prefWidth="75.0" text="Meno" />
+          <TableColumn fx:id="table_priezvisko" prefWidth="75.0" text="Priezvisko" />
+            <TableColumn fx:id="table_sc" prefWidth="95.0" text="Startovne cislo" />
+            <TableColumn fx:id="table_cat" prefWidth="92.0" text="Kategoria" />
+            <TableColumn fx:id="table_id" minWidth="3.0" prefWidth="51.0" text="id" />
         </columns>
       </TableView>
-      <Button layoutX="501.0" layoutY="353.0" mnemonicParsing="false" onAction="#backToDashBoard" prefHeight="25.0" prefWidth="85.0" text="Domov" />
-      <Button layoutX="501.0" layoutY="320.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Button" />
-      <Button layoutX="501.0" layoutY="287.0" mnemonicParsing="false" onAction="#addRacer" prefHeight="25.0" prefWidth="85.0" text="Pridat jazdca" />
+      <Button layoutX="492.0" layoutY="353.0" mnemonicParsing="false" onAction="#backToDashBoard" prefHeight="25.0" prefWidth="94.0" text="Domov" />
+      <Button layoutX="492.0" layoutY="286.0" mnemonicParsing="false" onAction="#showSections" prefHeight="25.0" prefWidth="94.0" text="Zobrazit" />
+      <Button layoutX="492.0" layoutY="254.0" mnemonicParsing="false" onAction="#addRacer" prefHeight="25.0" prefWidth="94.0" text="Pridat jazdca" />
+      <Button layoutX="492.0" layoutY="321.0" mnemonicParsing="false" onAction="#mathResult" prefHeight="25.0" prefWidth="94.0" text="Vyhodnotenie" />
    </children>
 </AnchorPane>
